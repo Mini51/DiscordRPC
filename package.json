@@ -1,0 +1,25 @@
+{
+  "name": "discordrpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youthfulslinky/DiscordRPC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youthfulslinky/DiscordRPC/issues"
+  },
+  "homepage": "https://github.com/youthfulslinky/DiscordRPC#readme",
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron": "^17.0.0"
+  }
+}

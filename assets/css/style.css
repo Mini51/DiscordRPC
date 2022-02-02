@@ -1,0 +1,24 @@
+:root{
+    --background-primary: #36393f;
+    --background-secondary: #2f3136;
+    --text-normal: white ;
+}
+.sidebar,
+.main {
+  min-height: 100vh;
+}
+
+body{
+    background-color: var(--background-primary);
+}
+
+
+.sidebar{
+    background-color: var(--background-primary);
+    color: var(--text-normal) ; 
+
+}
+.main{
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+}
