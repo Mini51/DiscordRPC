@@ -1,18 +1,19 @@
 {
   "name": "discordrpc",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CMD based custom RPC generator ",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youthfulslinky/DiscordRPC.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "RPC"
+  ],
+  "author": "mini5130",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/youthfulslinky/DiscordRPC/issues"
@@ -20,6 +21,6 @@
   "homepage": "https://github.com/youthfulslinky/DiscordRPC#readme",
   "dependencies": {
     "discord-rpc": "^4.0.1",
-    "electron": "^17.0.0"
+    "prompt-sync": "^4.1.6"
   }
 }
