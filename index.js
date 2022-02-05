@@ -15,10 +15,9 @@ switch(RPCtype){
     case "a": 
         console.log("you selected 0 button");
         var details = prompt('Input The detail field(Must be more then 2 chars)');
-        console.log(details)
-        var state = prompt('what do you want the state to be(Must be more then 2 chars)')
-        var largeImage = ('Input the large Image key')
-        var largeImageText = ('Input large Image text')
+        var state = prompt('what do you want the state to be(Must be more then 2 chars)');
+        var largeImage = prompt('Input the large Image key');
+        var largeImageText = prompt('Input large Image text');
 
         if( details === ""||state === ""){
           console.log('\x1b[31m [ERROR]You did not give info for one of the required fields \x1b[0m');
@@ -36,11 +35,11 @@ switch(RPCtype){
     case "b":
         console.log("you selected 1 button");
         var details = prompt('Input The detail field(Must be more then 2 chars)');
-        var state = prompt('What do you want the state to be(Must be more then 2 chars)')
-        var largeImage = ('Input the large Image key')
-        var largeImageText = ('Input large Image text')
-        var buttonName = prompt('What do you want the button name to be(Must be more then 2 chars)') 
-        var buttonURL = prompt('What do you want the button to link to(Must be a valid URL)')
+        var state = prompt('What do you want the state to be(Must be more then 2 chars)');
+        var largeImage = prompt('Input the large Image key');
+        var largeImageText = prompt('Input large Image text');
+        var buttonName = prompt('What do you want the button name to be(Must be more then 2 chars)');
+        var buttonURL = prompt('What do you want the button to link to(Must be a valid URL)');
 
         if(details === ""|| state === ""|| buttonName === "" || buttonURL === ""){
           console.log('\x1b[31m [ERROR]You did not give info for one of the required fields \x1b[0m');
@@ -50,10 +49,8 @@ switch(RPCtype){
             buttons: [{ label: buttonName, url: buttonURL}],
             details: details ,
             state: state ,
-            largeImageKey: 'snek_large',
-            largeImageText: 'tea is delicious',
-            smallImageKey: 'snek_small',
-            smallImageText: 'i am my own pillows',
+            largeImageKey:  largeImage ,
+            largeImageText: largeImageText ,
             instance: false,
           } 
         } 
@@ -63,8 +60,8 @@ switch(RPCtype){
 
         var details = prompt('Input The detail field(Must be more then 2 chars)');
         var state = prompt('What do you want the state to be(Must be more then 2 chars)')
-        var largeImage = ('Input the large Image key')
-        var largeImageText = ('Input large Image text')
+        var largeImage = prompt('Input the large Image key')
+        var largeImageText = prompt('Input large Image text')
         var buttonName = prompt('What do you want the first buttons name to be(Must be more then 2 chars)') 
         var buttonURL = prompt('What do you want the first buttons to link to(Must be a valid URL)')
         var buttonTwoName = prompt('What do you want the second buttons name to be(Must be more then 2 chars)') 
@@ -79,10 +76,8 @@ switch(RPCtype){
             buttons: [{ label: buttonName, url: buttonURL}, { label: buttonTwoName, url: buttonTwoURL}],
             details: details ,
             state: state ,
-            largeImageKey: 'snek_large',
-            largeImageText: 'tea is delicious',
-            smallImageKey: 'snek_small',
-            smallImageText: 'i am my own pillows',
+            largeImageKey: largeImage,
+            largeImageText: largeImageText,
             instance: false,
           }
         } 
