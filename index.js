@@ -16,24 +16,33 @@ switch(RPCtype){
         console.log("you selected 0 button");
         var details = prompt('Input The detail field(Must be more then 2 chars)');
         var state = prompt('what do you want the state to be(Must be more then 2 chars)')
+        var largeImage = ('Input the large Image key')
+        var largeImageText = ('Input large Image text')
 
          activity = {
           details: details ,
           state: state ,
-          largeImageKey: 'snek_large',
-          largeImageText: 'tea is delicious',
-          smallImageKey: 'snek_small',
-          smallImageText: 'i am my own pillows',
+          largeImageKey: largeImage,
+          largeImageText: largeImageText,
           instance: false,
         }
         break; 
     case "b":
         console.log("you selected 1 button");
         var details = prompt('Input The detail field(Must be more then 2 chars)');
-        var state = prompt('what do you want the state to be(Must be more then 2 chars)')
+        var state = prompt('What do you want the state to be(Must be more then 2 chars)')
+        var largeImage = ('Input the large Image key')
+        var largeImageText = ('Input large Image text')
         var buttonName = prompt('What do you want the button name to be(Must be more then 2 chars)') 
         var buttonURL = prompt('What do you want the button to link to(Must be a valid URL)')
 
+        activity = {
+          details: details ,
+          state: state ,
+          largeImageKey: largeImage ,
+          largeImageText: largeImageText ,
+          instance: false,
+        }
 
          activity = {
           buttons: [{ label: buttonName, url: buttonURL}],
@@ -48,6 +57,28 @@ switch(RPCtype){
         break;
     case "c":
         console.log("you selected 2 buttons");
+
+        var details = prompt('Input The detail field(Must be more then 2 chars)');
+        var state = prompt('What do you want the state to be(Must be more then 2 chars)')
+        var largeImage = ('Input the large Image key')
+        var largeImageText = ('Input large Image text')
+        var buttonName = prompt('What do you want the first buttons name to be(Must be more then 2 chars)') 
+        var buttonURL = prompt('What do you want the first buttons to link to(Must be a valid URL)')
+        var buttonTwoName = prompt('What do you want the second buttons name to be(Must be more then 2 chars)') 
+        var buttonTwoURL = prompt('What do you want the second buttons to link to(Must be a valid URL)')
+
+         activity = {
+          buttons: [{ label: buttonName, url: buttonURL}, { label: buttonTwoName, url: buttonTwoURL}],
+          details: details ,
+          state: state ,
+          largeImageKey: 'snek_large',
+          largeImageText: 'tea is delicious',
+          smallImageKey: 'snek_small',
+          smallImageText: 'i am my own pillows',
+          instance: false,
+        }
+
+
         break;
     default: 
         console.log('Loading RPC from defaultRPC.json')
