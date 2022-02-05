@@ -21,7 +21,7 @@ switch(RPCtype){
         var largeImage = prompt('Input the large Image key: ');
         var largeImageText = prompt('Input large Image text: ');
 
-        if( details === ""||state === ""){
+        if( details === ""|| state === ""){
           console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
           process.exit();
         } else { 
@@ -90,12 +90,6 @@ switch(RPCtype){
         console.log('\x1b[33mLoading RPC from defaultRPC.json')
         break;
 }
-
-
-
-
-
-
 
 // Register with the clientId 
 DiscordRPC.register(clientId);
