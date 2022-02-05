@@ -1,9 +1,8 @@
 {
-    "details": "working on RPC" ,
-    "state": "default RPC",
+    "buttons": [{ "label": "Example title", "url": "https://example.com"}],
+    "details": "Example head" ,
+    "state": "Example state",
     "largeImageKey": "Large_image",
-    "largeImageText": "nothing to see here",
-    "smallImageKey": "Small_Image",
-    "smallImageText": "are you gay?",
+    "largeImageText": "Example image text",
     "instance": false
 }
