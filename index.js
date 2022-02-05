@@ -14,13 +14,13 @@ switch(RPCtype){
 
     case "a": 
         console.log("you selected 0 button");
-        var details = prompt('Input The detail field(Must be more then 2 chars)');
-        var state = prompt('what do you want the state to be(Must be more then 2 chars)');
-        var largeImage = prompt('Input the large Image key');
-        var largeImageText = prompt('Input large Image text');
+        var details = prompt('Input The detail field(Must be more then 2 chars): ');
+        var state = prompt('what do you want the state to be(Must be more then 2 chars): ');
+        var largeImage = prompt('Input the large Image key: ');
+        var largeImageText = prompt('Input large Image text: ');
 
         if( details === ""||state === ""){
-          console.log('\x1b[31m [ERROR]You did not give info for one of the required fields \x1b[0m');
+          console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
           process.exit();
         } else { 
          activity = {
@@ -34,15 +34,15 @@ switch(RPCtype){
         break; 
     case "b":
         console.log("you selected 1 button");
-        var details = prompt('Input The detail field(Must be more then 2 chars)');
-        var state = prompt('What do you want the state to be(Must be more then 2 chars)');
-        var largeImage = prompt('Input the large Image key');
-        var largeImageText = prompt('Input large Image text');
-        var buttonName = prompt('What do you want the button name to be(Must be more then 2 chars)');
-        var buttonURL = prompt('What do you want the button to link to(Must be a valid URL)');
+        var details = prompt('Input The detail field(Must be more then 2 chars): ');
+        var state = prompt('What do you want the state to be(Must be more then 2 chars): ');
+        var largeImage = prompt('Input the large Image key: ') ;
+        var largeImageText = prompt('Input large Image text: ');
+        var buttonName = prompt('What do you want the button name to be(Must be more then 2 chars): ');
+        var buttonURL = prompt('What do you want the button to link to(Must be a valid URL): ');
 
         if(details === ""|| state === ""|| buttonName === "" || buttonURL === ""){
-          console.log('\x1b[31m [ERROR]You did not give info for one of the required fields \x1b[0m');
+          console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
           process.exit();
         } else {
           activity = {
@@ -58,17 +58,17 @@ switch(RPCtype){
     case "c":
         console.log("you selected 2 buttons");
 
-        var details = prompt('Input The detail field(Must be more then 2 chars)');
-        var state = prompt('What do you want the state to be(Must be more then 2 chars)')
-        var largeImage = prompt('Input the large Image key')
-        var largeImageText = prompt('Input large Image text')
-        var buttonName = prompt('What do you want the first buttons name to be(Must be more then 2 chars)') 
-        var buttonURL = prompt('What do you want the first buttons to link to(Must be a valid URL)')
-        var buttonTwoName = prompt('What do you want the second buttons name to be(Must be more then 2 chars)') 
-        var buttonTwoURL = prompt('What do you want the second buttons to link to(Must be a valid URL)')
+        var details = prompt('Input The detail field(Must be more then 2 chars): ');
+        var state = prompt('What do you want the state to be(Must be more then 2 chars): ')
+        var largeImage = prompt('Input the large Image key: ')
+        var largeImageText = prompt('Input large Image text: ')
+        var buttonName = prompt('What do you want the first buttons name to be(Must be more then 2 chars): ') 
+        var buttonURL = prompt('What do you want the first buttons to link to(Must be a valid URL): ')
+        var buttonTwoName = prompt('What do you want the second buttons name to be(Must be more then 2 chars): ') 
+        var buttonTwoURL = prompt('What do you want the second buttons to link to(Must be a valid URL): ')
 
           if(state === "" || buttonName === "" || buttonURL === ""|| buttonTwoName === "" || buttonTwoURL === ""){ 
-            console.log('\x1b[31m [ERROR]You did not give info for one of the required fields \x1b[0m');
+            console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
             process.exit();
           } else { 
 
