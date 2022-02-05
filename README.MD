@@ -1,6 +1,9 @@
+# <span style=" color: red;">NOTE THIS APP IS STILL A WORK IN PROGRESS PLEASE REPORT ISSUES TO THE ISSUE TAB</span>
+
 # Custom DiscorRPC (CLI)
 
 This app lets you make a custom Discord RPC.
+
 
 
 ## feauters
