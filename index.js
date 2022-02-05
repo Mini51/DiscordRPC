@@ -2,7 +2,9 @@ const DiscordRPC = require('discord-rpc');
 const { clientId } = require('./config.json')
 var prompt = require('prompt-sync')();
 var activity = require('./defaultRPC.json')
-const startTimestamp = new Date();
+
+//Starting timer 
+const startTimestamp = Date.now()
 
 //Ask the user how many buttons they want on there RPC
 console.log('Select the amount of buttons you want \n A - no buttons \n B - 1 button \n C - 2 buttons \n\x1b[33mNOTE: you can press enter to load the RPC from defaultRPC.json \x1b[0m'); 
@@ -26,6 +28,7 @@ switch(RPCtype){
          activity = {
           details: details ,
           state: state ,
+          startTimestamp,
           largeImageKey: largeImage,
           largeImageText: largeImageText,
           instance: false,
@@ -99,10 +102,6 @@ DiscordRPC.register(clientId);
 
 //Define the rpc client 
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
-
-// Start the timer 
-
-
 
 
 async function setActivity() {
