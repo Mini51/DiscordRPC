@@ -3,6 +3,23 @@ const { clientId } = require('./config.json')
 var prompt = require('prompt-sync')();
 var activity = require('./defaultRPC.json')
 
+//Defining console colors
+const Color = {
+  Reset: "\x1b[0m",
+  
+  FgRed: "\x1b[31m",
+  FgGreen: "\x1b[32m",
+  FgYellow: "\x1b[33m",
+  
+  BgRed: "\x1b[41m",
+  BgGreen: "\x1b[42m",
+  BgYellow: "\x1b[43m",
+}
+
+
+
+
+
 //Starting timer 
 const startTimestamp = Date.now()
 
@@ -22,7 +39,7 @@ switch(RPCtype){
         var largeImageText = prompt('Input large Image text: ');
 
         if( details === ""|| state === ""){
-          console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
+          console.log(Color.FgRed, '[ERROR]You did not give info for one of the required fields'), Color.Reset;
           process.exit();
         } else { 
          activity = {
@@ -45,7 +62,7 @@ switch(RPCtype){
         var buttonURL = prompt('What do you want the button to link to(Must be a valid URL): ');
 
         if(details === ""|| state === ""|| buttonName === "" || buttonURL === ""){
-          console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
+          console.log(Color.FgRed, '[ERROR]You did not give info for one of the required fields', Color.Reset);
           process.exit();
         } else {
           activity = {
@@ -71,7 +88,7 @@ switch(RPCtype){
         var buttonTwoURL = prompt('What do you want the second buttons to link to(Must be a valid URL): ')
 
           if(state === "" || buttonName === "" || buttonURL === ""|| buttonTwoName === "" || buttonTwoURL === ""){ 
-            console.log('\x1b[31m[ERROR]You did not give info for one of the required fields \x1b[0m');
+            console.log( Color.FgRed, 'You did not give info for one of the required fields ', Color.Reset);
             process.exit();
           } else { 
 
@@ -87,7 +104,7 @@ switch(RPCtype){
 
         break;
     default: 
-        console.log('\x1b[33mLoading RPC from defaultRPC.json')
+        console.log(Color.FgYellow, 'Loading RPC from defaultRPC.json', Color.Reset)
         break;
 }
 
@@ -108,8 +125,7 @@ async function setActivity() {
   
   rpc.on('ready', () => {
     setActivity();
-    console.log(`\x1b[32mActivity has been set successfully.  \x1b[0m`)
-
+    console.log(Color.FgGreen, 'Activity has been set successfully.', Color.Reset)
     setInterval(() => {
       setActivity();
     }, 15e3);
