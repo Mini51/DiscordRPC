@@ -4,17 +4,7 @@ const DiscordRPC = require('discord-rpc');
 const fs = require('fs');
 const prompt = require('prompt-sync')();
 var activity = require('./defaultRPC.json')
-const Color = {
-  Reset: "\x1b[0m",
-  
-  FgRed: "\x1b[31m",
-  FgGreen: "\x1b[32m",
-  FgYellow: "\x1b[33m",
-  
-  BgRed: "\x1b[41m",
-  BgGreen: "\x1b[42m",
-  BgYellow: "\x1b[43m",
-}
+require('./style.js')();
 
 
 // Check if the config exsits if it does not it will start the setup
@@ -43,7 +33,7 @@ switch(RPCtype){
         var largeImageText = prompt('Input large Image text: ');
 
         if( details === ""|| state === ""){
-          console.log(Color.FgRed, '[ERROR]You did not give info for one of the required fields'), Color.Reset;
+          console.logDanger('[ERROR]You did not give info for one of the required fields');
           process.exit();
         } else { 
          activity = {
@@ -66,7 +56,7 @@ switch(RPCtype){
         var buttonURL = prompt('What do you want the button to link to(Must be a valid URL): ');
 
         if(details === ""|| state === ""|| buttonName === "" || buttonURL === ""){
-          console.log(Color.FgRed, '[ERROR]You did not give info for one of the required fields', Color.Reset);
+          console.logDanger('[ERROR]You did not give info for one of the required fields');
           process.exit();
         } else {
           activity = {
@@ -92,7 +82,7 @@ switch(RPCtype){
         var buttonTwoURL = prompt('What do you want the second buttons to link to(Must be a valid URL): ')
 
           if(state === "" || buttonName === "" || buttonURL === ""|| buttonTwoName === "" || buttonTwoURL === ""){ 
-            console.log( Color.FgRed, 'You did not give info for one of the required fields ', Color.Reset);
+            console.logDanger('You did not give info for one of the required fields ');
             process.exit();
           } else { 
 
@@ -108,7 +98,7 @@ switch(RPCtype){
 
         break;
     default: 
-        console.log(Color.FgYellow, 'Loading RPC from defaultRPC.json', Color.Reset)
+        console.logWarn('Loading RPC from defaultRPC.json')
         break;
 }
 
@@ -129,7 +119,7 @@ async function setActivity() {
   
   rpc.on('ready', () => {
     setActivity();
-    console.log(Color.FgGreen, 'Activity has been set successfully.', Color.Reset)
+    console.logPass('Activity has been set successfully.')
     setInterval(() => {
       setActivity();
     }, 15e3);
@@ -137,12 +127,12 @@ async function setActivity() {
   
 rpc.login({ clientId }).catch(console.error);
 } else { 
-  console.log(Color.FgYellow,"Since this is the first time using this tool, we have a bit of setup to do.", Color.Reset)
+  console.logWarn("Since this is the first time using this tool, we have a bit of setup to do.")
   var cliendID = prompt(' Please input your clientID:')
 
 
     if(cliendID === ""){
-        console.log(Color.FgRed, '[ERROR] You did not input your clientID', Color.Reset)
+        console.logWarn('[ERROR] You did not input your clientID')
         return
     }
     // What needs to be written
@@ -154,6 +144,6 @@ rpc.login({ clientId }).catch(console.error);
     let formatedData = JSON.stringify(Data);
 
     fs.writeFile('config.json', formatedData, () =>{
-      console.log(Color.FgGreen, 'Config file has been created, Please rerun this app to use the RPC maker.', Color.Reset)
+      console.logPass('Config file has been created, Please rerun this app to use the RPC maker.')
     })
 }
