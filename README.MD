@@ -1,5 +1,5 @@
   [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-  [![Support Server](https://img.shields.io/discord/591914197219016707.svg?color=7289da&label=Support-server&logo=discord&style=flat-square)](https://discord.gg/vpEv3HJ)
+  [![Support Server](https://img.shields.io/discord/591914197219016707.svg?color=7289da&label=Support-server&logo=discord&style=flat-square)](https://discord.gg/fkg9pbP42V)
  
 <h1 align="center"> Custom discord RPC (CLI)</h1>
 
