@@ -1,28 +1,34 @@
-//importing modules
+// Thank you for trying out my rpc software hop you like it =)  
+
+// Made by: Mini#5130 
+// Github: https://github.com/Mini51
+
+
+
+//importing modules and tools
 const { Console } = require('console');
 const DiscordRPC = require('discord-rpc');
 const fs = require('fs');
-const prompt = require('prompt-sync')();
-var activity = require('./defaultRPC.json')
+const prompt = require('prompt-sync')(); 
+const activity = require('./defaultRPC.json');
 require('./style.js')();
 
 
 // Check if the config exsits if it does not it will start the setup
 if (fs.existsSync('./config.json')) {
  
+//Get the client ID from the config
+const { clientId } = require('./config.json');
 
-//Starting timer 
+//Starting timer for the rpc 
 const startTimestamp = Date.now()
 
 //Ask the user how many buttons they want on there RPC
 console.log('Select the amount of buttons you want \n A - no buttons \n B - 1 button \n C - 2 buttons \n\x1b[33mNOTE: you can press enter to load the RPC from defaultRPC.json \x1b[0m'); 
 var  RPCtype = prompt(' ').toLowerCase();
 
-//Get the client ID from the config
-const { clientId } = require('./config.json');
 
-
-// Check what option the user chose 
+// Check what option the user chose and then giving them more optinons based on there choice  
 switch(RPCtype){
 
     case "a": 
@@ -108,7 +114,7 @@ DiscordRPC.register(clientId);
 //Define the rpc client 
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 
-
+// Making the funnction to update the rpc every 15 sec 
 async function setActivity() {
     if (!rpc) {
       return;
@@ -126,21 +132,22 @@ async function setActivity() {
   });
   
 rpc.login({ clientId }).catch(console.error);
+
 } else { 
   console.logWarn("Since this is the first time using this tool, we have a bit of setup to do.")
   var cliendID = prompt(' Please input your clientID:')
 
-
+    // Checks if the user did not input data  
     if(cliendID === ""){
         console.logWarn('[ERROR] You did not input your clientID')
         return
     }
-    // What needs to be written
+    // Define the data that needs to be sent 
     let Data = { 
         clientId: cliendID
     }
 
-    //Converting so that the data can be sent
+    // Formating data sent by user 
     let formatedData = JSON.stringify(Data);
 
     fs.writeFile('config.json', formatedData, () =>{
