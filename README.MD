@@ -23,7 +23,7 @@
    <br>
 
 <h1 align= "center"> Make your own preset </h1>
-<h2>To change your preset open defaultRPC.json in a text editor</h2>
+<h3>To change your preset open defaultRPC.json in a text editor</h3>
 
 <br>
 
