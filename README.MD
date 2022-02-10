@@ -1,29 +1,54 @@
-# Custom DiscorRPC (CLI)
+  [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+  [![Support Server](https://img.shields.io/discord/591914197219016707.svg?color=7289da&label=Support-server&logo=discord&style=flat-square)](https://discord.gg/vpEv3HJ)
+ 
+<h1 align="center"> Custom discord RPC (CLI)</h1>
 
-This app lets you make a custom Discord RPC.
+
+###  This is a simple and light weight custom Discord RPC maker.
 
 
-
-## feauters
+## Feautres 
 - option to include buttons
 - sharable RPC's with JSON 
+ 
 
-   <br>
-   <br>
 
-# Setup 
+<h1 align="center"> Setup </h1> 
+
    1. Install [NodeJS](https://nodejs.org/en/)
    2. Run `NPM I`
-   3. Put your clientId in the config.json
-   4. run the .bat file 
+   3. run start.bat  
 
    <br>
    <br>
 
-# Default RPC 
-   There is a file called `defaultRPC.json` IN there you can make your custom RPC, and then share that file to others so they have the same RPC as you. 
+<h1 align= "center"> Make your own preset </h1>
+<h2>To change your preset open defaultRPC.json in a text editor</h2>
 
-   To make a button IN there you need this line `"buttons": [{ "label": "Take me to the github", "url": "https://github.com/Mini51/DiscordRPC/"}],`
+<br>
 
-   Put it at the top of the file like in this example image
-   ![Failed to load image](/README-assets/Button-example.png "How to add a custom button to your default RPC")
+<h3>Example with a button</h3>
+
+```json
+{
+    "buttons": [{ "label": "Example title", "url": "https://example.com"}],
+    "details": "Example head" ,
+    "state": "Example state",
+    "largeImageKey": "Large_image",
+    "largeImageText": "Example image text",
+    "instance": false
+} 
+```
+
+<h3>Example with 2 buttons</h3>
+
+```json
+{
+    "buttons": [{ "label": "Example title", "url": "https://example.com"}, { "label": "Example title", "url": "https://example.com"}],
+    "details": "Example head" ,
+    "state": "Example state",
+    "largeImageKey": "Large_image",
+    "largeImageText": "Example image text",
+    "instance": false
+}
+```
