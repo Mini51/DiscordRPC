@@ -1,10 +1,12 @@
   [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-  [![Support Server](https://img.shields.io/discord/591914197219016707.svg?color=7289da&label=Support-server&logo=discord&style=flat-square)](https://discord.gg/fkg9pbP42V)
- 
+  [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label=Support)](https://discord.gg/fkg9pbP42V)
+
 <h1 align="center"> Custom discord RPC (CLI)</h1>
 
 
-###  This is a simple and light weight custom Discord RPC maker.
+###  This app is a simple and lightweight custom Discord RPC maker that is CLI-based.
+
+<br>
 
 
 ## Feautres 
@@ -21,6 +23,7 @@
 
    <br>
    <br>
+
 
 <h1 align= "center"> Make your own preset </h1>
 <h3>To change your preset open defaultRPC.json in a text editor</h3>
@@ -52,3 +55,5 @@
     "instance": false
 }
 ```
+<hr>
+<center>Made with ❤️ by mini#5130
