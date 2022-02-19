@@ -11,6 +11,7 @@ const DiscordRPC = require('discord-rpc');
 const fs = require('fs');
 const prompt = require('prompt-sync')(); 
 const activity = require('./defaultRPC.json');
+const scopes = ['rpc', 'rpc.api'];
 require('./style.js')();
 
 
@@ -124,9 +125,9 @@ async function setActivity() {
   }
   
   rpc.on('ready', () => {
-    setActivity();
-    console.logPass('Activity has been set successfully.')
-    setInterval(() => {
+    setActivity();;
+    console.logPass(`Successfully started RPC as ${rpc.user.username} `);
+  (() => {
       setActivity();
     }, 15e3);
   });
@@ -139,7 +140,7 @@ rpc.login({ clientId }).catch(console.error);
 
     // Checks if the user did not input data  
     if(cliendID === ""){
-        console.logWarn('[ERROR] You did not input your clientID')
+        console.logDanger('[ERROR] You did not input your clientID')
         return
     }
     // Define the data that needs to be sent 
