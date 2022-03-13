@@ -4,7 +4,8 @@
 <h1 align="center"> Custom discord RPC (CLI)</h1>
 
 
-###  This app is a simple and lightweight custom Discord RPC maker that is CLI-based.
+<h3 align="center"> This app is a simple and lightweight custom Discord RPC maker that is CLI-based.
+<p> May be broken</p>
 
 <br>
 
