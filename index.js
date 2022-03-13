@@ -5,12 +5,12 @@
 
 
 
+
 //importing modules and tools
-const { Console } = require('console');
 const DiscordRPC = require('discord-rpc');
 const fs = require('fs');
 const prompt = require('prompt-sync')(); 
-const activity = require('./defaultRPC.json');
+let activity = require('./defaultRPC.json');
 const scopes = ['rpc', 'rpc.api'];
 require('./style.js')();
 
@@ -141,7 +141,6 @@ rpc.login({ clientId }).catch(console.error);
     // Checks if the user did not input data  
     if(cliendID === ""){
         console.logDanger('[ERROR] You did not input your clientID')
-        return
     }
     // Define the data that needs to be sent 
     let Data = { 
